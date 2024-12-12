@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Altcoins</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="styledinamic.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="footer.css">
+
+
+
+   
+</head>
+
+<body>
+   
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <IMg class="icono" src="assets/img/Bitcoin.svg.png"></IMg>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index (1) (1).html" target="_blank">Inicio</a>
+          <a href="alt.html" >Precios</a>
+          <a href="API.html">API</a>
+          <a href="" target="_blank">Codepen</a>
+          <a href="" target="_blank">JsFiddle</a>
+        </div>
+      </div>
+      
+
+      
+ 
+<div class="clasedivmarquesina">
+  <h1 class="dondecomprar">Donde comprar Bitcoin en Costa Rica?</h1>
+      <section class="marquesina">
+        <marquee 
+          width="100%"
+          behavior="alternate">
+          <a href="https://www.binance.com/es"><img src="assets/marque/Binance-logo.png" class="imgmarque" alt=""></a>
+         <a href="https://www.coinbase.com/es/"> <img src="assets/marque/Coinbase.png" class="imgmarque" alt=""> </a>
+    
+         <a href="https://paxful.com/es"> <img src="assets/marque/1200px-Paxful_Logo_Black.png" class="imgmarque" alt=""></a>
+         <a href="https://cex.io/"> <img src="assets/marque/1280px-CEX.IO_Bitcoin_Exchange_logo.svg.png" class="imgmarque" alt=""></a>
+    
+         <a href="https://localbitcoins.com/"> <img src="assets/marque/localbitcoins.png" class="imgmarque" alt=""></a>
+         <a href="https://www.satoshitango.com/global"> <img src="assets/marque/logo_Satoshitango.png" class="imgmarque" alt=""></a>
+
+         <a href="https://localcryptos.com/"> <img src="assets/marque/LocalCryptos-Logo.png" class="imgmarque" alt=""></a>
+         <a href="https://spectrocoin.com"> <img src="assets/marque/SPECTRO-COIN_logo.png" class="imgmarque" alt=""></a>
+    
+        </marquee>
+        </section>
+      </div>
+
+        <div class="container monedas">
+            
+       <!--  <h1 class="dolarcolon">Cambio dolar a colon <h3 id="dolarcolon"></h3> -->
+          
+         </h1>
+         
+         <div style="overflow-x:auto;" >
+          <table>
+            <tr style="text-align: left;">
+              <th class="thstyle">Top</th>
+              <th class="thstyle">Nombre</th>
+              <th class="thstyle">24h %</th>
+              <th class="thstyle">Dolares</th>
+              <th class="thstyle">Colones</th>
+         
+            </tr>
+
+        
+                <tbody id="contenido">
+                  
+                  <tr class="BTC_coin">
+                    
+                  </tr>
+                 
+      
+                  
+                </tbody>
+                <hr class="hrstyle">
+                
+              </table>
+            
+             
+            </div></div>
+</div>
+      <footer>
+        <div class="copyright">
+          <p>&copy 2013 - Organisation</p>
+        </div>
+        <div class="social">
+          <a href="#" class="support">Contact Us</a>
+          <a href="#" class="face">f</a>
+          <a href="#" class="tweet">t</a>
+          <a href="#" class="linked">in</a>
+          
+        </div>
+      </footer>
+               
+
+
+</body>
+
+
+ 
+
+
+<script>	
+
+
+
+
+
+
+
+   
+
+</script>
+
+<script>
+
+var decimales = 0;
+
+    //nuevo async datapics
+   
+
+
+
+
+    //Datos de relleno del chart.js hacia el HTML
+    
+    const options = {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer l1DmvkRNIeIUl9czcx5utQXJSD9F6jUsGE+LlZ4T26E', // Tu clave de API
+    'Accept': 'application/json', // Asegúrate de aceptar la respuesta en formato JSON
+  },
+};
+
+fetch('https://openapiv1.coinstats.app/coins', options)
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`Error ${res.status}: ${res.statusText}`);
+    }
+    return res.json();
+  })
+  .then(res => {
+    console.log(res); // Aquí puedes procesar los datos recibidos de la API
+  })
+  .catch(err => {
+    console.error('Error al obtener los datos de la API:', err);
+  });
+
+
+Getcoinlist()
+
+
+
+
+
+const metododollartocr = async () => {
+var myHeaders = new Headers();
+myHeaders.append("apikey", "l1DmvkRNIeIUl9czcx5utQXJSD9F6jUsGE+LlZ4T26E");
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
+
+
+const dir = await fetch('https://api.coinstats.app/public/v1/coins', {
+  method: 'GET',
+  mode: 'no-cors'
+});
+
+const postingCRC = await dir.json();
+console.log(postingCRC)
+
+
+  
+//const preciosindecimales= Math.trunc(postingCRC.rates.CRC);
+
+
+(async () => {
+  
+   decimales =   document.querySelector('#dolarcolon').innerHTML =  `Precio: ${preciosindecimales}`;
+
+  
+})();
+
+
+
+
+}
+
+//marquesina img
+
+jQuery(document).ready(function($) {
+  $('.slick.marquee').slick({
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    centerMode: true,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    infinite: true,
+    initialSlide: 1,
+    arrows: false,
+    buttons: false
+  });
+});
+
+
+metododollartocr()
+    
+    //funcion para hacer un for a todos los datos
+    function tabledata(post) {
+      const contenido = document.getElementById('contenido'); // Obtener el contenedor de la tabla
+      if (!post || !Array.isArray(post.coins)) {
+        console.error('Datos no válidos:', post);
+        return;
+      }
+
+      // Recorrer todas las monedas y agregar las filas a la tabla
+      post.coins.forEach(valor => {
+        const fila = document.createElement('tr'); // Crear una fila para la tabla
+
+        // Agregar las celdas con los datos de cada moneda
+        fila.innerHTML = `
+          <td>${valor.rank}</td>
+          <td><img src="${valor.icon}" alt="${valor.name}" width="20"> ${valor.name} (${valor.symbol})</td>
+          <td>${valor.priceChange1d} %</td>
+          <td>$ ${valor.price.toFixed(2)}</td>
+          <td>₡ ${(valor.price * 660).toFixed(0)}</td> <!-- Precio en CRC (asumiendo que el tipo de cambio es 660) -->
+        `;
+    
+
+//Igualo los valores a los valores del config de CHART.JS
+
+metododollartocr()
+
+function metodogetnombre(){
+  var x = document.getElementById("dolarcolon").textContent;
+}
+
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+
+
+
+
+
+</html>

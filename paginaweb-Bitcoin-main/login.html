@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(34, 34, 34);
+            color: white;
+        }
+        .card {
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Inicio de Sesión</h2>
+        <div class="card mx-auto mt-4" style="max-width: 400px;">
+            <div class="card-body">
+                <form id="formLogin">
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

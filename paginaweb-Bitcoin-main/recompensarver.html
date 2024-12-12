@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Recompensas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(34, 34, 34);
+            color: white;
+        }
+        .card {
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+        .btn-primary, .btn-danger {
+            border: none;
+        }
+        table {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Gestión de Recompensas</h2>
+
+        <!-- Información del Usuario -->
+        <div class="card mx-auto mt-4" style="max-width: 600px;">
+            <div class="card-body">
+                <h5 class="card-title">Usuario: Juan Pérez</h5>
+                <p>Email: juan.perez@example.com</p>
+            </div>
+        </div>
+
+        <!-- Tabla de Recompensas -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Recompensas Obtenidas</h5>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Recompensa</th>
+                            <th>Billetera</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaRecompensas">
+                        <!-- Ejemplo de fila -->
+                        <tr>
+                            <td>Recomendación</td>
+                            <td>1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</td>
+                            <td>0.0012 BTC</td>
+                            <td>2024-11-19</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="detallesRecompensa(1)">Detalles</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarRecompensa(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ver Videos</td>
+                            <td>0xABC123XYZ456DEF789</td>
+                            <td>0.0456 ETH</td>
+                            <td>2024-11-18</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="detallesRecompensa(2)">Detalles</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarRecompensa(2)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Encuestas</td>
+                            <td>0xUSDT1234567890ABCDE</td>
+                            <td>10.00 USDT</td>
+                            <td>2024-11-17</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="detallesRecompensa(3)">Detalles</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarRecompensa(3)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function detallesRecompensa(id) {
+            alert(`Mostrando detalles de la recompensa con ID ${id}`);
+        }
+
+        function eliminarRecompensa(id) {
+            if (confirm('¿Está seguro de que desea eliminar esta recompensa?')) {
+                // Aquí iría la lógica para eliminar la recompensa
+                alert(`Recompensa con ID ${id} eliminada.`);
+            }
+        }
+    </script>
+</body>
+</html>

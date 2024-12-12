@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganar y Ver Recompensas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(34, 34, 34);
+            color: white;
+        }
+        .card {
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+        .btn-primary, .btn-success, .btn-danger, .btn-info, .btn-warning {
+            border: none;
+        }
+        table {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center"> Ganar y Ver Recompensas</h2>
+
+        <!-- Información del Usuario -->
+        <div class="card mx-auto mt-4" style="max-width: 600px;">
+            <div class="card-body">
+                <h5 class="card-title">Usuario: Juan Pérez</h5>
+                <p>Email: juan.perez@example.com</p>
+                <p>Saldo Total: 0.056 BTC</p>
+            </div>
+        </div>
+
+        <!-- Sección para Ganar Recompensas -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Ganar Recompensas</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-primary btn-block" onclick="realizarAccion('Recomendar Amigos')">Recomendar Amigos</button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-success btn-block" onclick="realizarAccion('Ver Videos')">Ver Videos</button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-danger btn-block" onclick="realizarAccion('Responder Encuestas')">Responder Encuestas</button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-info btn-block" onclick="realizarAccion('Ver Programaciones')">Ver Programaciones</button>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-warning btn-block" onclick="realizarAccion('Crear Código')">Crear Código</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Recompensas Obtenidas -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Recompensas Obtenidas</h5>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Actividad</th>
+                            <th>Billetera</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaRecompensas">
+                        <!-- Recompensas Dinámicas -->
+                        <tr>
+                            <td>Recomendar Amigos</td>
+                            <td>1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</td>
+                            <td>0.0012 BTC</td>
+                            <td>2024-11-19</td>
+                        </tr>
+                        <tr>
+                            <td>Ver Videos</td>
+                            <td>0xABC123XYZ456DEF789</td>
+                            <td>0.0456 ETH</td>
+                            <td>2024-11-18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function realizarAccion(accion) {
+            let billetera;
+            let montoAleatorio;
+            const fecha = new Date().toISOString().split('T')[0];
+
+            // Definir billetera y monto según la acción
+            switch (accion) {
+                case "Recomendar Amigos":
+                    billetera = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
+                    montoAleatorio = (Math.random() * 0.005).toFixed(8);
+                    break;
+                case "Ver Videos":
+                    billetera = "0xABC123XYZ456DEF789";
+                    montoAleatorio = (Math.random() * 0.01).toFixed(8);
+                    break;
+                case "Responder Encuestas":
+                    billetera = "0xUSDT1234567890ABCDE";
+                    montoAleatorio = (Math.random() * 10).toFixed(2);
+                    break;
+                case "Ver Programaciones":
+                    billetera = "0xPGM123456DEF789XYZ";
+                    montoAleatorio = (Math.random() * 0.02).toFixed(8);
+                    break;
+                case "Crear Código":
+                    billetera = "0xCODING789XYZ456DEF";
+                    montoAleatorio = (Math.random() * 0.03).toFixed(8);
+                    break;
+                default:
+                    billetera = "Sin definir";
+                    montoAleatorio = "0.00";
+            }
+
+            // Agregar fila a la tabla
+            const nuevaFila = `
+                <tr>
+                    <td>${accion}</td>
+                    <td>${billetera}</td>
+                    <td>${montoAleatorio} BTC</td>
+                    <td>${fecha}</td>
+                </tr>
+            `;
+            $("#tablaRecompensas").append(nuevaFila);
+
+            alert(`Has completado "${accion}" y ganado ${montoAleatorio} BTC.`);
+        }
+    </script>
+</body>
+</html>

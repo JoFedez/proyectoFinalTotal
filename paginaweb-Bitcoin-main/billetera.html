@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billeteras por Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(34, 34, 34);
+            color: white;
+        }
+        .card {
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+        .crypto-icon {
+            width: 30px;
+            height: 30px;
+        }
+        table {
+            color: white;
+        }
+        .btn-primary, .btn-danger {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Gestión de Billeteras</h2>
+
+        <!-- Información del usuario -->
+        <div class="card mx-auto mt-4" style="max-width: 600px;">
+            <div class="card-body">
+                <h5 class="card-title">Usuario: Juan Pérez</h5>
+                <p>Email: juan.perez@example.com</p>
+            </div>
+        </div>
+
+        <!-- Tabla de billeteras -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Billeteras Registradas</h5>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Criptomoneda</th>
+                            <th>Ícono</th>
+                            <th>Dirección</th>
+                            <th>Saldo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBilleteras">
+                        <!-- Ejemplo de fila -->
+                        <tr>
+                            <td>Bitcoin</td>
+                            <td><img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC" class="crypto-icon"></td>
+                            <td>1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</td>
+                            <td>0.52345 BTC</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="copiarDireccion('1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa')">Copiar</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarBilletera(1)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ethereum</td>
+                            <td><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH" class="crypto-icon"></td>
+                            <td>0xABC123XYZ456DEF789</td>
+                            <td>2.03456 ETH</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="copiarDireccion('0xABC123XYZ456DEF789')">Copiar</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarBilletera(2)">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>USDT</td>
+                            <td><img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" class="crypto-icon"></td>
+                            <td>0xUSDT1234567890ABCDE</td>
+                            <td>1500.00 USDT</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="copiarDireccion('0xUSDT1234567890ABCDE')">Copiar</button>
+                                <button class="btn btn-danger btn-sm" onclick="eliminarBilletera(3)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copiarDireccion(direccion) {
+            navigator.clipboard.writeText(direccion).then(() => {
+                alert(`Dirección copiada: ${direccion}`);
+            }).catch(err => {
+                console.error('Error al copiar dirección:', err);
+            });
+        }
+
+        function eliminarBilletera(id) {
+            if (confirm('¿Está seguro de que desea eliminar esta billetera?')) {
+                // Aquí iría la lógica para eliminar la billetera
+                alert(`Billetera con ID ${id} eliminada.`);
+            }
+        }
+    </script>
+</body>
+</html>
