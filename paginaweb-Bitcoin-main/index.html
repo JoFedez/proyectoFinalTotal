@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bitcoin Costa Rica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styledinamic.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cssbootstraproadmaps.css">
+<link rel="stylesheet" href="footer.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+
+   
+</head>
+
+<body>
+   
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            <IMg class="icono" src="assets/img/Bitcoin.svg.png"></IMg>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#Dominancia" target="_blank">Inicio</a>
+          <a href="alt.html">Precios</a>
+          <a href="API.html" target="_blank">API BTC</a>
+          <a href="login.html" target="_blank">Login</a>
+          <a href="registro.php" target="_blank">Registro</a>
+          <a href="editar.php" target="_blank">Mi cuenta</a>
+          <a href="billetera.php" target="_blank">Billetera</a>
+          <a href="retiros.php" target="_blank">Retiros</a>
+          <a href="ganareco.php" target="_blank">Ganar BTC </a>
+          
+        </div>
+      </div>
+      
+
+ 
+
+
+
+        <div class="container">
+            <div class="row">
+
+               
+
+              <div class="col-6 labels">
+                <h3 class="colorfuente">
+                    Que es Bitcoin? <br>
+                    <h6 class=" colorfuente">La primera moneda virtual decentralizada que se puede enviar mediante internet.</h6>
+                   
+                  </h3>
+            </div>
+              
+              <div class="col-6 columnas">
+                <p>Precio de Bitcoin = </p>
+               <img class="tamañoimages" src="assets/img/undraw_digital_currency_qpak.svg" alt="">
+              </div>
+
+              </div>
+
+              <h2 class="titulo-centrado">Ventajas de Bitcoin</h2>
+              <div class="row">
+               
+                <hr class="hrdetails">
+                
+                <div class="row">
+
+                  <div class="col-md-1"></div>
+        
+                    <div class="col-md-10 col-12 columnas">
+                    
+                      <div class="row">
+
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/decentralized (1).png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Decentralizado</p>
+                           
+                          </div>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/shield.png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Seguro</p>
+                           
+                          </div>
+                        </div>
+        
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/international.png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Global</p>
+                            
+                          </div>
+                        </div>
+        
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/low-price.png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Barato</p>
+                            
+                          </div>
+                        </div>
+        
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/bitcoin.png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Tuyo</p>
+                            
+                          </div>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-3 margenescard">
+        
+                          <div style="color: #757575;">
+                            <img class="card-img-top" src="assets/img/transaccion-monetaria.png" alt="Card image cap">
+                            
+                              <p class="card-text alinia">Rápido</p>
+                            
+                          </div>
+                        </div>
+
+                      
+
+                      
+                      <div class="col-md-1"></div>
+                     
+                      
+                       </div>
+                       <div class="row" style="margin-top: 100px">
+                    <div class="col-md-6 col-12 ">
+    <h5 class="colorfuente">La tecnologia detras de bitcoin es llamada Blockchain</h5>
+        <h6 class="colorfuente"> La cual se puede definir como una estructura matemática para almacenar datos de una manera que es casi imposible de falsificar.</p>
+                  </div>
+ <div class="col-md-4 col-12 columnas">
+<H6 class="colorfuente">Bitcoin no es la unica!</6>
+    <p class="colorfuente">Existen gran variedad de criptomonedas, entre ellas Ethereum,Theter,Binance Coin,Ripple entre muchas mas.
+    </p>
+              </div></div>
+             <br>
+              <hr class="hrstyle">
+            
+              <div class="row">
+              <div class="col-md-5 col-12">
+                <div id="myApp"></div>
+                <canvas id="myChart" ></canvas>
+            </div>
+
+              <div class="col-md-4 col-12 labels ">
+                <H3 class="colorfuente">Aunque bitcoin no es la unica criptomoneda</h3>
+                    <p class="colorfuente">Domina sobre todas las demás en el mercado de criptoactivos
+                    </p>
+                  </div></div>
+
+                              
+              
+                  
+              
+                
+             
+               
+            
+          
+              </div> </div></div>
+       
+      </div>
+    
+
+      <footer>
+        <div class="copyright">
+          <p>&copy 2013 - Organisation</p>
+        </div>
+        <div class="social">
+          <a href="#" class="support">Contact Us</a>
+          <a href="#" class="face">f</a>
+          <a href="#" class="tweet">t</a>
+          <a href="#" class="linked">in</a>
+        </div>
+      </footer>
+               
+
+
+</body>
+
+
+ 
+
+
+<script>	
+	$(function(){
+    $().timelinr({
+        orientation: 	'vertical',
+        issuesSpeed: 	300,
+        datesSpeed: 	100,
+        arrowKeys: 		'true',
+        startAt:		3
+    })
+});</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+
+
+
+
+
+    //Datos de relleno del chart.js hacia el HTML
+    var ctx = document.getElementById("myChart").getContext("2d");
+
+
+    var myChart = new Chart(ctx, {
+
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    // aquio es donde me gustaria agregar los datos para que se llene automaticamente.
+                    backgroundColor: ['rgb(255, 159, 64)', 'rgb(137, 142, 168)', 'rgb(37, 156, 119)', 'rgb(240, 204, 58)', 'rgb(38, 170, 223)','rgb(223, 0, 118)','rgb(50, 90, 152)','rgb(560, 200, 502)'],
+                },
+            ],
+            labels: ["Bitcoin","Ethereum","Tether","Binance Coin","Ripple","Polkadot","Litecoin","Otras"],
+        },
+        options: {
+            legend: { display: false },
+
+            plugins: {
+                datalabels: {
+                    formatter: (value) => {
+                        return value + '%';
+                    }
+                }
+            }
+        }
+    })
+
+
+    //Datos de configuracion del CHARt.js
+
+    const config = {
+        responsive:true,
+        type: 'donut',
+        data: [],
+        options: {},
+        plugins: [],
+    }
+
+
+
+
+
+    // funcion para agregar datos manualmente al chart.js
+
+    function addData(chart, label, data) {
+        chart.data.labels.push(label);
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.push(data);
+        });
+        chart.update();
+    }
+
+    //
+
+
+
+
+
+
+    // funcion para obtener datos de un API externo.
+
+    const getbitcoinAsync = async () => {
+
+        try {
+
+            const dir = await fetch('https://api.domination.finance/api/v0/price')
+
+            const post = await dir.json();
+
+            (async () => {
+                console.log(await post.data.bitcoin);
+            })();
+
+            //Igualo los valores a los valores del config de CHART.JS
+
+            myChart.config.data.datasets[0].data[0] = post.data.bitcoin;
+            myChart.config.data.datasets[0].data[1] = post.data.ethereum;
+            myChart.config.data.datasets[0].data[2] = post.data.tether;
+            myChart.config.data.datasets[0].data[3] = post.data.binancecoin;
+            myChart.config.data.datasets[0].data[4] = post.data.ripple;
+            myChart.config.data.datasets[0].data[5] = post.data.polkadot;
+           
+           
+
+
+            
+
+            myChart.config.data.datasets[0].data[6] = post.data.litecoin;
+            myChart.config.data.datasets[0].data[7] = post.data.others;
+           
+
+
+
+            myChart.update();
+
+            return post.data.bitcoin;
+        }
+        catch (error) {
+            console.log(error)
+
+
+        }
+    };
+
+    // funcion de prueba para retornar El asyn como un valor
+    const printAddress = async () => {
+        const a = await getbitcoinAsync();
+        await console.log(a);
+    };
+
+
+    //funcion para cargar todo al cargar la index
+
+    window.addEventListener('load', getbitcoinAsync());
+
+
+    function clickear(Chart) {
+
+        Chart.config.data.datasets[0].data[0];
+
+        var dato = Chart.config.data.labels[0];
+        dato.click();
+
+    }
+
+
+
+   
+
+</script>
+
+<script>
+
+    //nuevo chart
+
+
+
+    //Datos de relleno del chart.js hacia el HTML
+    
+
+
+var ctxs = document.getElementById("mynewchart").getContext("2d");
+var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+var myChart = new Chart(ctxs,configure, {
+  type: "line",
+  dataLine: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: "rgba(0,0,0,1.0)",
+      borderColor: "rgba(0,0,0,0.1)",
+      data: yValues
+    }]
+  },
+  options:{}
+});
+    
+
+
+var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+    //Datos de configuracion del CHARt.js
+
+    const configure = {
+  type: 'line',
+  data: data,
+};
+
+
+</script>
+<script src="js/jquery.timelinr-0.9.54.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/roadmap.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+</html>
